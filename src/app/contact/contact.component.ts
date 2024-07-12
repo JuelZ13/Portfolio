@@ -34,7 +34,7 @@ export class ContactComponent {
    this.checkMessage();
    this.checkPrivacy();
 
-   if(this.validName && this.validMail && this.validMessage && this.validPrivacy){
+   if(this.validName && this.validMail && this.validMessage && !this.validPrivacy){
     this.validAll = true;
    }else{
     this.validAll = false;
@@ -78,7 +78,7 @@ export class ContactComponent {
   }
 
   checkPrivacy() {
-    if (this.checkboxPrivacy == true){
+    if (this.checkboxPrivacy === true){
       this.validPrivacy = true;
     }else{
       this.validPrivacy = false;
