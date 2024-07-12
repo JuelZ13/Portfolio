@@ -39,7 +39,7 @@
           <input (input)="checkInput()" [(ngModel)]="checkboxPrivacy" type="checkbox" name="checkbox" required>
           <span class="checkmark"></span>
         </label>
-        <span [class.d-none]="validPrivacy" id="infoPrivacy">{{ languageModule.sl_contactPrivacyrequired }}</span>
+        <span [class.d-none]="!validPrivacy" id="infoPrivacy">{{ languageModule.sl_contactPrivacyrequired }}</span>
       </div>
       <div class="divButton">
         <button [disabled]="!validAll" type="submit">{{ languageModule.sl_contactBtn }}</button>

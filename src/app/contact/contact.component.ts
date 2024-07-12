@@ -64,7 +64,6 @@ export class ContactComponent {
 
   checkMailPattern(value: string){
     let pattern = new RegExp("[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}");
-
     return pattern.test(value);
   }
 
