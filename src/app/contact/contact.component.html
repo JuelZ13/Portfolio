@@ -1,0 +1,50 @@
+<h1>{{ languageModule.sl_h1Contact }}</h1>
+<div class="divContactsForm">
+  <div class="divContacts">
+    <div class="info">
+      <div>
+        <h2>{{ languageModule.sl_h2Contact }}</h2>
+        <span>{{ languageModule.sl_spanContact }}</span>
+        <h3>{{ languageModule.sl_h3Contact }}<b>{{ languageModule.sl_bContact }}</b></h3>
+      </div>
+      <div class="backgroundElipse1">
+        <img src="../../assets/img/contact/Ellipse1.png" alt="">
+      </div>
+      <div class="divUpButton">
+        <a class="upButton" href="#"><img src="../../assets/img/contact/upButton.png" alt=""></a>
+      </div>
+    </div>
+
+    <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
+      <div class="group">
+        <input (change)="checkInput()" [(ngModel)]="inputName" id="inputName" class="inputText" type="text" name="name" placeholder="{{ languageModule.sl_contactName }}" required>
+        <label id="labelName">{{ languageModule.sl_contactName }}</label>
+        <span [class.d-none]="validName" id="infoName">{{ languageModule.sl_contactNamerequired }}</span>
+        <img [class.d-none]="!formActive" class="valid" src="{{ nameImg }}">
+      </div>
+      <div class="group">
+        <input (change)="checkInput()" [(ngModel)]="inputMail" id="inputMail" class="inputText" type="email" name="email" placeholder="{{ languageModule.sl_contactMail }}" required>
+        <label id="labelMail">{{ languageModule.sl_contactMail }}</label>
+        <span [class.d-none]="validMail" id="infoMail">{{ languageModule.sl_contactMailrequired }}</span>
+        <img [class.d-none]="!formActive" class="valid" src="{{ mailImg }}">
+      </div>
+      <div class="group groupMessage">
+        <textarea (change)="checkInput()" [(ngModel)]="inputMessage" id="inputMessage" type="text" name="message" placeholder="{{ languageModule.sl_contactMessage }}" required></textarea>
+        <label id="labelMessage">{{ languageModule.sl_contactMessage }}</label>
+        <span [class.d-none]="validMessage" id="infoMessage">{{ languageModule.sl_contactMessagerequired }}</span>
+        <img [class.d-none]="!formActive" class="valid" src="{{ messageImg }}">
+      </div>
+      <div class="group groupPrivacy">
+        <label class="container">{{ languageModule.sl_contactPrivacy1 }}<a href="privacy" target="_blank">{{ languageModule.sl_contactPrivacy2 }}</a>{{ languageModule.sl_contactPrivacy3 }}
+          <input (change)="checkInput()" [(ngModel)]="checkboxPrivacy" type="checkbox" name="checkbox" required>
+          <span class="checkmark"></span>
+        </label>
+        <span [class.d-none]="validPrivacy" id="infoPrivacy">{{ languageModule.sl_contactPrivacyrequired }}</span>
+      </div>
+      <div class="divButton">
+        <button [disabled]="!validAll" type="submit">{{ languageModule.sl_contactBtn }}</button>
+        <img class="elipse" src="../../assets/img/contact/Ellipse2.png" alt="">
+      </div>
+    </form>
+  </div>
+</div>

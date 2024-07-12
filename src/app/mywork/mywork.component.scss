@@ -1,0 +1,163 @@
+@import "../../shared/variables";
+
+.divHeadlline{
+  display: flex;
+  width: calc(100% - 100px);
+  padding-left: 100px;
+  padding-top: 40px;
+
+  h1{
+    color:#FF5959;
+    font-family: "Baloo";
+    font-size: $headlines;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0.01em;
+    text-align: left;
+  }
+
+  img{
+    height: 108.75px;
+    width: 108.75px;
+    object-fit: cover;
+    margin-left: 60px
+  };
+}
+
+.divDescription{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  span{
+    display: flex;
+    width: calc(50vw - 100px);
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    text-align: left;
+  }
+  div{
+    img{
+      width: 183px;
+      height: 183px;
+      object-fit: cover;
+    }
+  }
+}
+
+.backgroundElipse1{
+  position: absolute;
+  display: flex;
+  object-fit: cover;
+  top: 670px;
+  transform:rotate(-81.57 deg);
+  z-index: -999;
+}
+
+.backgroundElipse2{
+  position: absolute;
+  display: flex;
+  object-fit: cover;
+  top: 980px;
+  right: 0;
+  transform:rotate(-81.57 deg);
+  z-index: -999;
+}
+.backgroundElipse3{
+  position: absolute;
+  display: flex;
+  object-fit: cover;
+  left: 100px;
+  top: 1380px;
+  z-index: -999;
+}
+.backgroundElipse4{
+  position: absolute;
+  display: flex;
+  object-fit: cover;
+  left: 160px;
+  top: 1850px;
+  transform:rotate(-81.57 deg);
+  z-index: -999;
+}
+.backgroundElipse5{
+  position: absolute;
+  display: flex;
+  object-fit: cover;
+  right: 100px;
+  top: 2400px;
+  transform:rotate(-81.57 deg);
+
+}
+.backgroundElipse6{
+  position: absolute;
+  display: flex;
+  object-fit: cover;
+  left: 600px;
+  top: 2920px;
+  transform:rotate(-81.57 deg);
+  z-index: -999;
+}
+
+@media(max-width: 1199px){
+  .divHeadlline{
+    padding-left: 25px;
+
+    h1{
+      font-size: 64px;
+      line-height: 76.8px;
+    }
+
+    img{
+      transform: translateX(-64px);
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  .divDescription{
+    flex-direction: column;
+    padding-left: 25px;
+
+    span{
+      width: 100%;
+    }
+    div{
+      display: flex;
+      justify-content: flex-end;
+      img{
+        width: 70px;
+        height: 70px;
+      }
+    }
+  }
+
+  .backgroundElipse1{
+    top: 540px;
+    height: 238.11px;
+  }
+  .backgroundElipse2{
+    top: 1135px;
+    height: 269.17px;
+  }
+  .backgroundElipse3{
+    display: none;
+  }
+  .backgroundElipse4{
+    left: 0px;
+    top: 1950px;
+    height: 134.91px;
+  }
+  .backgroundElipse5{
+    top: 2725px;
+    height: 39px;
+  }
+  .backgroundElipse6{
+    top: 3390px;
+    left: 283px;
+    height: 78px;
+  }
+
+}

@@ -1,0 +1,109 @@
+@import "../../shared/variables";
+
+.skillSet{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(128.94deg, #FF5959 -33.96%, #FF5959 36.71%, #DE0000 112.25%);
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+
+  h1{
+    font-family: "Baloo";
+    font-size: $headlines;
+    font-weight: 400;
+    line-height: 96px;
+    letter-spacing: 0.01em;
+    text-align: left;
+    color: white;
+    padding-top: 40px;
+  }
+
+  .skills{
+    display: flex;
+    width: 100%;
+
+    .split{
+      display: flex;
+      justify-content: space-between;
+      gap: 47px;
+      flex-wrap: wrap;
+      width: 100%;
+
+      a{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+        flex: 1 0 15%;
+        width: 86px;
+        height: 150px;
+        text-decoration: none;
+
+        &:hover{
+          cursor: pointer;
+
+          img{
+            transition: transform 125ms;
+            transform: translateY(-12px);
+          };
+
+          span{
+            transition: font-weight 125ms;
+            font-weight: bold;
+          }
+        }
+
+        img{
+          object-fit: cover;
+        }
+
+        span{
+          color: white;
+          font-family: Montserrat;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 19px;
+          letter-spacing: 0em;
+        }
+      }
+    }
+  }
+}
+@media(max-width: 1199px){
+  .skillSet{
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 60px;
+
+    h1{
+      font-size: 64px;
+      line-height: 76.8px;
+    }
+
+    .skills{
+      .split{
+          a{
+          span{
+            font-size: 14px;
+            line-height: 16.8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 800px){
+  #skill4{
+    order:9;
+  }
+  #skill8{
+    order:8;
+  }
+  #skill9{
+    order:7;
+  }
+}

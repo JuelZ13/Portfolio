@@ -1,0 +1,421 @@
+@import "../../shared/variables";
+h1{
+  color: #FF5959;
+  font-family: "Baloo";
+  font-size: $headlines;
+  font-weight: 400;
+  line-height: 108px;
+  padding-left: 100px;
+}
+.divContacts{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: calc(45vw - 100px);
+    padding-bottom: 40px;
+
+    h2{
+      color: #FF5959;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 38px;
+      text-align: left;
+      margin-block-start: 0;
+    }
+
+    span{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      text-align: left;
+    }
+
+    h3{
+      color: #FF5959;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: left;
+
+      b{
+        font-family: "Poppins";
+        font-weight: bold;
+      }
+    }
+
+    .backgroundElipse1{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+    }
+
+    .upButton{
+      img{
+        &:hover{
+          content:url("../../assets/img/contact/upButtonHover.png");
+      }
+      }
+    }
+  }
+
+  form{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(45vw - 50px);
+    min-height: 690px;
+    gap: 24px;
+
+    .group {
+      position:relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+      min-height: 64px;
+      min-width: calc(45vw - 56px);
+
+      .valid{
+        position: absolute;
+        top: 20px;
+        right: 25px;
+      }
+
+    }
+
+    .groupMessage {
+      min-height: 246px;
+    }
+
+    .groupPrivacy {
+      align-items: flex-start;
+    }
+
+    #infoName, #infoMail, #infoMessage, #infoPrivacy {
+      display: inline-block;
+      font-family: "Poppins";
+      font-size: 14px;
+      width: 100%;
+      font-weight: 400;
+      line-height: 17px;
+      color: #E61C40;
+      padding-top: 8px;
+    }
+
+    #labelName, #labelMail, #labelMessage {
+      display: inline-block;
+      position: absolute;
+      left: 12px;
+      top: -8px;
+      font-size: 16px;
+      color: black;
+      background-color: #fff;
+      padding: 0 3px;
+    }
+
+    #inputName{
+      &:placeholder-shown + #labelName {
+        display: none;
+      }
+
+      &:focus + #labelName {
+        display: inline-block;
+      }
+    }
+
+    #inputMail{
+      &:placeholder-shown + #labelMail {
+        display: none;
+      }
+
+      &:focus + #labelMail  {
+        display: inline-block;
+      }
+
+    }
+
+    #inputMessage{
+      &:placeholder-shown + #labelMessage {
+        display: none;
+      }
+
+      &:focus + #labelMessage  {
+        display: inline-block;
+      }
+
+      &::placeholder{
+        font-size: 16px;
+        color: black;
+      }
+
+      &:hover{
+        border: 2px solid #FF5959;
+      }
+
+      &:focus {
+        border: 2px solid #FF5959;
+        border-radius: 10px;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        visibility: hidden; /*hide placeholder on focus*/
+      }
+
+      &:focus-visible{
+        outline: none;
+      }
+    }
+
+    .inputText{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      width: calc(45vw - 100px);
+      min-height: 50px;
+      border: 1px solid #FF5959;
+      border-radius: 10px;
+      padding: 5px 20px;
+
+      &::placeholder{
+        font-size: 16px;
+        color: black;
+      }
+
+      &:hover{
+        border: 2px solid #FF5959;
+      }
+
+      &:focus {
+        border: 2px solid #FF5959;
+      }
+
+      &:focus::-webkit-input-placeholder {
+        visibility: hidden; /*hide placeholder on focus*/
+      }
+
+      &:focus-visible{
+        outline: none;
+      }
+    }
+
+    textarea{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      width: calc(45vw - 100px);
+      min-height: 202px;
+      border: #FF5959 1px solid;
+      border-radius: 10px;
+      resize: vertical;
+      padding: 20px;
+    }
+
+    .divButton{
+      display: flex;
+      justify-content: center;
+      height: 68px;
+      width: 100%;
+
+
+      button{
+        background-color: transparent;
+        width: 181px;
+        height: 58px;
+        border: #FF5959 2px solid;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px 0px #00000026;
+        color: #FF5959;
+        font-family: "Poppins";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 28px;
+        text-align: center;
+
+        &:disabled{
+          color: #BBBBBB;
+          border: 2px solid #BBBBBB
+        }
+
+        &:hover:enabled{
+          animation-name: hoverSayHello;
+          animation-duration: 100ms;
+          background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #FF5959 6.25%, #FF5959 51.56%, #DE0000 100%);
+          color: white;
+          height: 68px;
+          width: 201px;
+        }
+        @keyframes hoverSayHello {
+          0% {width: 181px;
+              height: 58px;
+          }
+          25%   {
+            background: linear-gradient(104.85deg, #FF5959 -49.45%, #DE0000 27.88%, #FFFFFF 33.64%, #FFFFFF 39.44%, #FFFFFF 90.08%);
+            width: 181px;
+            height: 58px;
+          }
+          50%  {
+            background: linear-gradient(104.4deg, #FF5959 27.52%, #DE0000 62.24%, #FFFFFF 64.83%, #FFFFFF 67.43%, #FFFFFF 90.18%);
+            height: 64px;
+            width: 191px;
+          }
+          100%  {
+            background: radial-gradient(74.22% 74.22% at 19.79% 22.42%, #FF5959 6.25%, #FF5959 51.56%, #DE0000 100%);
+            height: 68px;
+            width: 201px;
+          }
+        }
+      }
+      .elipse{
+        position: absolute;
+        display: flex;
+        z-index: -1;
+        right: 0;
+        bottom: 64px;
+      }
+    }
+  }
+}
+
+/* Customize the label (the container) */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+
+  &:hover > .checkmark{
+    background-color: #FFD6D6;
+  }
+}
+
+.container a{
+  color: #FF5959;
+  text-decoration: none;
+
+  &:hover{
+    color: #DE0000;
+    text-decoration: underline;
+    font-weight: 700;
+  }
+
+  &:hover ~ .checkmark{
+      background-color: transparent;
+  }
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: transparent;
+  border: 2px solid #FF5959;
+  border-radius: 2px;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: white;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 6px;
+  top: 1px;
+  width: 4px;
+  height: 10px;
+  border: solid #FF5959;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+@media(max-width: 1120px){
+  h1{
+    font-size: 45px;
+    line-height: 54px;
+  }
+
+  h2{
+    font-size: 23px;
+    line-height: 27.6px;
+  }
+
+  .divContacts{
+    display: flex;
+    flex-direction: column;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .info, form, .group {
+      width: calc(100%) !important;
+    }
+    .inputText, textarea{
+      width: calc(100% - 40px) !important;
+    }
+
+    form{
+      align-items: center;
+    }
+  }
+
+  .divContactsForm{
+    position: relative;
+  }
+
+  .backgroundElipse1{
+    position: absolute;
+    top:  calc(400px);
+    left: calc((100% / 2) - (101.57px / 2));
+    img{
+      width: 101.57px;
+    }
+  }
+
+  .divUpButton{
+    position: absolute;
+    bottom: 32px;
+    left: 32px;
+    z-index: 1;
+  }
+}
