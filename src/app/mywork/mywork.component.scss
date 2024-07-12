@@ -159,5 +159,17 @@
     left: 283px;
     height: 78px;
   }
+}
 
+@media(max-width: 475px){
+  .divHeadlline{
+    width: calc(100% - 25px);
+    display: block;
+  }
+
+  .backgroundElipse6{
+    top: 3390px;
+    left: 224px;
+    height: 78px;
+  }
 }

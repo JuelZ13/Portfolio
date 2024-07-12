@@ -26,12 +26,14 @@ app-navbar{
 
 app-mywork{
   position: relative;
+  overflow: hidden;
 }
 
 app-project{
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 
 }
 app-contact{

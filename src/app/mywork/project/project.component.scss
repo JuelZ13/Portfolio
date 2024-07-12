@@ -223,3 +223,30 @@
   }
 
 }
+
+@media(max-width: 460px){
+
+  .project{
+    width: calc(100%);
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .linkProject{
+    margin-left: 50px;
+    min-width: 320px !important;
+    height: 223px !important;
+
+    &:hover:not(.noAnimation) > .linkProjectImg{
+      transform: translate(-25px, -50px);
+      width: 320px !important;
+      height: 223px !important;
+    }
+
+    .linkProjectImg{
+      width: 270px !important;
+      height: 170px !important;
+    }
+  }
+
+}

@@ -103,7 +103,6 @@
   position: absolute;
   bottom: -103px;
   left: calc(50vw - 103px);
-  z-index: 2;
 }
 
 
@@ -137,7 +136,7 @@
 
   .background {
     flex-direction: column-reverse;
-    padding: 0 16px;
+    padding-left: 16px;
 
     .headline {
       color: white !important;
@@ -162,4 +161,30 @@
   .divLinks{
     display: none;
   }
+}
+
+@media(max-width: 460px){
+  .background {
+   overflow: hidden;
+  }
+}
+
+@media(max-width: 400px){
+  .ellipsebg{
+    min-width: 520px !important;
+  }
+
+  .h1 {
+    font-size: 24px !important;
+    line-height: 24px !important;
+  }
+  .h2 {
+    font-size: 56px !important;
+    line-height: 56px !important;
+  }
+  .h3 {
+    font-size: 51px !important;
+    line-height: 64px !important;
+  }
+
 }
