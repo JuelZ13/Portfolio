@@ -45,7 +45,7 @@ export class ProjectComponent {
       headline2: 'Angular | TrueScript | HTML | SCSS',
       description_en: 'Portfolio to my person as frontend developer.',
       description_de: 'Portfolio über meine Person als Frontend Entwickler.',
-      img: '../../../assets/img/project/black.png',
+      img: '../../../assets/img/project/portfolio.png',
       enabled: 1,
       link: "Angular",
       githubLink: "https://github.com/JuelZ13/Portfolio",
