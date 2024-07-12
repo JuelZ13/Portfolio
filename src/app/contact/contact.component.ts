@@ -1,4 +1,4 @@
-import { Component,Inject,Input } from '@angular/core';
+import { Component,inject,Inject,Input } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { LanguageModule } from '../language/language.module';
 import { HttpClient } from '@angular/common/http';
@@ -86,10 +86,10 @@ export class ContactComponent {
     }
   }
 
-  http = Inject(HttpClient);
+  http = inject(HttpClient);
 
-  mailTest = true;
-
+  mailTest = false;
+  messageSwtich = false;
   post = {
     endPoint: 'https://portfolio.it-klee.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
@@ -117,7 +117,12 @@ export class ContactComponent {
             error: (error: any) => {
               console.error(error);
             },
-            complete: () => console.info('send post complete'),
+            complete: () => {
+              this.messageSwtich = true;
+              setTimeout(()=> {
+                this.messageSwtich = false;
+              },2000);
+            },
           });
       } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
         ngForm.resetForm();

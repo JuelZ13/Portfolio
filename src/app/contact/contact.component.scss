@@ -371,6 +371,26 @@ h1{
   transform: rotate(45deg);
 }
 
+.messageEMail{
+  position: absolute;
+  height: 50px;
+  width: 200px;
+  bottom: calc(100% / 2 + 25px);
+  left: calc(100vw / 2 - 100px);
+  background-color: #FF5959;
+  padding: 8px 16px;
+  border-radius: 8px;
+  animation: 2s showMessage ease-in-out;
+}
+@keyframes showMessage {
+  from{
+    bottom: 0;
+  }
+  to{
+    bottom: calc(100% / 2 + 25px);
+  }
+}
+
 @media(max-width: 1120px){
   h1{
     font-size: 45px;
