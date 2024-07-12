@@ -113,6 +113,7 @@ export class ContactComponent {
           .subscribe({
             next: (response: any) => {
               ngForm.resetForm();
+              this.formActive = false;
             },
             error: (error: any) => {
               console.error(error);
@@ -121,6 +122,7 @@ export class ContactComponent {
               this.messageSwtich = true;
               setTimeout(()=> {
                 this.messageSwtich = false;
+
               },2000);
             },
           });

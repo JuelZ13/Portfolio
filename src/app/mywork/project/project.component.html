@@ -1,5 +1,5 @@
 <div id="{{ projects[i].link }}" class="project projectR{{ getSide(i) }}" *ngFor="let p of projects; let i = index;" >
-  <a [class.noAnimation]="0 == projects[i].enabled" class="linkProject" href="{{ projects[i].liveLink }}">
+  <a [class.noAnimation]="0 == projects[i].enabled" class="linkProject" href="{{ projects[i].liveLink }}" target="_blank">
     <img class="linkProjectImg linkProjectImgR{{ getSide(i) }}" src="{{ projects[i].img }}" alt="">
   </a>
   <div class="info side{{ getSide(i) }}">
@@ -9,8 +9,8 @@
     <span [class.d-none]="'de' == languageModule.selectedLanguage">{{ projects[i].description_en }}</span>
     <span [class.d-none]="'en' == languageModule.selectedLanguage">{{ projects[i].description_de }}</span>
     <div class="divButtons">
-      <a [class.noAnimationBtn]="0 == projects[i].enabled" class="btnTest"  href="{{ projects[i].liveLink }}">Live test</a>
-      <a [class.noAnimationBtn]="0 == projects[i].enabled" class="btnGit" href="{{ projects[i].githubLink }}">Github</a>
+      <a [class.noAnimationBtn]="0 == projects[i].enabled" class="btnTest"  href="{{ projects[i].liveLink }}" target="_blank">Live test</a>
+      <a [class.noAnimationBtn]="0 == projects[i].enabled" class="btnGit" href="{{ projects[i].githubLink }}" target="_blank">Github</a>
     </div>
   </div>
 </div>

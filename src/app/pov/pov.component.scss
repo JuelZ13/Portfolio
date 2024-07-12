@@ -11,7 +11,6 @@
   .ellipsebg{
     position: absolute;
     object-fit: cover;
-    width: 40.02vw;
     min-width: 612px;
     top: 0px;
     left: 0px;
@@ -19,7 +18,7 @@
 
   .profilimg {
     margin-top: 106px;
-    max-width: 50vw;
+    max-width: 50%;
     object-fit: cover;
     object-position: top;
     z-index: 1;
@@ -102,7 +101,7 @@
 .ellipse {
   position: absolute;
   bottom: -103px;
-  left: calc(50vw - 103px);
+  left: calc(50% - 103px);
 }
 
 

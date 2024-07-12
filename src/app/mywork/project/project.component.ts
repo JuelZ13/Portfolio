@@ -23,7 +23,7 @@ export class ProjectComponent {
       img: '../../../assets/img/project/join.png',
       enabled: 1,
       link: "JavaScript",
-      githublink: "https://github.com/JuelZ13/Join",
+      githubLink: "https://github.com/JuelZ13/Join",
       liveLink:"https://join.it-klee.de"
     },
     {

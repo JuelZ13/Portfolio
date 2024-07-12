@@ -17,26 +17,26 @@
 
     <form (ngSubmit)="sendMail(contactForm)" #contactForm="ngForm">
       <div class="group">
-        <input (change)="checkInput()" [(ngModel)]="inputName" id="inputName" class="inputText" type="text" name="name" placeholder="{{ languageModule.sl_contactName }}" required>
+        <input (input)="checkInput()" [(ngModel)]="inputName" id="inputName" class="inputText" type="text" name="name" placeholder="{{ languageModule.sl_contactName }}" required>
         <label id="labelName">{{ languageModule.sl_contactName }}</label>
         <span [class.d-none]="validName" id="infoName">{{ languageModule.sl_contactNamerequired }}</span>
         <img [class.d-none]="!formActive" class="valid" src="{{ nameImg }}">
       </div>
       <div class="group">
-        <input (change)="checkInput()" [(ngModel)]="inputMail" id="inputMail" class="inputText" type="email" name="email" placeholder="{{ languageModule.sl_contactMail }}" required>
+        <input (input)="checkInput()" [(ngModel)]="inputMail" id="inputMail" class="inputText" type="email" name="email" placeholder="{{ languageModule.sl_contactMail }}" required>
         <label id="labelMail">{{ languageModule.sl_contactMail }}</label>
         <span [class.d-none]="validMail" id="infoMail">{{ languageModule.sl_contactMailrequired }}</span>
         <img [class.d-none]="!formActive" class="valid" src="{{ mailImg }}">
       </div>
       <div class="group groupMessage">
-        <textarea (change)="checkInput()" [(ngModel)]="inputMessage" id="inputMessage" type="text" name="message" placeholder="{{ languageModule.sl_contactMessage }}" required></textarea>
+        <textarea (input)="checkInput()" [(ngModel)]="inputMessage" id="inputMessage" type="text" name="message" placeholder="{{ languageModule.sl_contactMessage }}" required></textarea>
         <label id="labelMessage">{{ languageModule.sl_contactMessage }}</label>
         <span [class.d-none]="validMessage" id="infoMessage">{{ languageModule.sl_contactMessagerequired }}</span>
         <img [class.d-none]="!formActive" class="valid" src="{{ messageImg }}">
       </div>
       <div class="group groupPrivacy">
         <label class="container">{{ languageModule.sl_contactPrivacy1 }}<a href="privacy" target="_blank">{{ languageModule.sl_contactPrivacy2 }}</a>{{ languageModule.sl_contactPrivacy3 }}
-          <input (change)="checkInput()" [(ngModel)]="checkboxPrivacy" type="checkbox" name="checkbox" required>
+          <input (input)="checkInput()" [(ngModel)]="checkboxPrivacy" type="checkbox" name="checkbox" required>
           <span class="checkmark"></span>
         </label>
         <span [class.d-none]="validPrivacy" id="infoPrivacy">{{ languageModule.sl_contactPrivacyrequired }}</span>

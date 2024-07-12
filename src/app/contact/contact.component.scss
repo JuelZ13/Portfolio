@@ -19,6 +19,7 @@ h1{
     flex-direction: column;
     justify-content: space-between;
     width: calc(45vw - 100px);
+    max-width: 548px;
     padding-bottom: 40px;
 
     h2{
@@ -72,6 +73,7 @@ h1{
     flex-direction: column;
     align-items: flex-start;
     width: calc(45vw - 50px);
+    max-width: 600px;
     min-height: 690px;
     gap: 24px;
 
@@ -83,7 +85,6 @@ h1{
       align-items: center;
       text-align: left;
       min-height: 64px;
-      min-width: calc(45vw - 56px);
 
       .valid{
         position: absolute;
@@ -180,11 +181,13 @@ h1{
       font-size: 16px;
       font-weight: 400;
       line-height: 19px;
-      width: calc(45vw - 100px);
+      width: calc(45vw - 135px);
+      max-width: 522px;
       min-height: 50px;
       border: 1px solid #FF5959;
       border-radius: 10px;
       padding: 5px 20px;
+      padding-right: 55px;
 
       &::placeholder{
         font-size: 16px;
@@ -212,12 +215,14 @@ h1{
       font-size: 16px;
       font-weight: 400;
       line-height: 19px;
-      width: calc(45vw - 100px);
+      width: calc(45vw - 135px);
+      max-width: 522px;
       min-height: 202px;
       border: #FF5959 1px solid;
       border-radius: 10px;
       resize: vertical;
       padding: 20px;
+      padding-right: 55px;
     }
 
     .divButton{
@@ -376,7 +381,7 @@ h1{
   height: 50px;
   width: 200px;
   bottom: calc(100% / 2 + 25px);
-  left: calc(100vw / 2 - 100px);
+  left: calc(100% / 2 - 100px);
   background-color: #FF5959;
   padding: 8px 16px;
   border-radius: 8px;
@@ -390,6 +395,7 @@ h1{
     bottom: calc(100% / 2 + 25px);
   }
 }
+
 
 @media(max-width: 1120px){
   h1{
@@ -413,7 +419,7 @@ h1{
       width: calc(100%) !important;
     }
     .inputText, textarea{
-      width: calc(100% - 40px) !important;
+      width: calc(100% - 75px) !important;
     }
 
     form{

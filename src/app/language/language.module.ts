@@ -38,6 +38,7 @@ export class LanguageModule {
   @Input() public sl_contactPrivacy3:string = "";
   @Input() public sl_contactPrivacyrequired:string = "";
   @Input() public sl_contactBtn:string = "";
+  @Input() public sl_footerImprint:string = "";
 
   constructor(){
     this.setLanguageEN();
@@ -92,6 +93,8 @@ export class LanguageModule {
       this.sl_contactPrivacy3 = " and agree to the processing of my data as outlined.";
       this.sl_contactPrivacyrequired = "Please accept the privacy policy";
       this.sl_contactBtn = "Say hello ;)";
+
+      this.sl_footerImprint="Imprint";
   }
 
   public setLanguageDE(){
@@ -132,5 +135,7 @@ export class LanguageModule {
       this.sl_contactPrivacy3 = " gelesen und stimme zu.";
       this.sl_contactPrivacyrequired = "Bitte akzeptieren Sie die privacy policy";
       this.sl_contactBtn = "Sag hallo ;)";
+
+      this.sl_footerImprint="Impressum";
   }
 }

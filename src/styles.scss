@@ -4,7 +4,14 @@ html{
 
 body{
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+app-root{
+  position: relative;
+  max-width: 1440px;
 }
 
 *{
@@ -17,7 +24,7 @@ app-main{
 }
 
 app-navbar{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -43,6 +50,14 @@ app-contact{
 
 .d-none{
   display: none !important;
+}
+
+
+@media(min-width:1440px){
+  app-navbar{
+    left: calc((100vw - 1440px) / 2);
+    right: calc((100vw - 1440px) / 2);
+  }
 }
 
 /* montserrat-regular - latin */

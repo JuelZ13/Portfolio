@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LanguageModule } from '../language/language.module';
 
 @Component({
   selector: 'app-footer',
@@ -9,4 +10,5 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  constructor(public languageModule: LanguageModule){}
 }
