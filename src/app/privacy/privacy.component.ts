@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { NavbarComponent } from "../navbar/navbar.component";
 import { FooterComponent } from "../footer/footer.component";
+import { LanguageModule } from '../language/language.module';
 
 @Component({
     selector: 'app-privacy',
@@ -9,6 +10,7 @@ import { FooterComponent } from "../footer/footer.component";
     styleUrl: './privacy.component.scss',
     imports: [NavbarComponent, FooterComponent]
 })
-export class PrivacyComponent {
 
+export class PrivacyComponent {
+constructor(public languageModule: LanguageModule){}
 }

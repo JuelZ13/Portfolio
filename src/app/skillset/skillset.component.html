@@ -1,11 +1,13 @@
 <div class="skillSet">
-  <h1>{{ languageModule.sl_h1Skillset }}</h1>
-  <div class="skills">
-    <div class="split">
-      <a href="{{ skills1[i].link }}" id="skill{{ i }}" class="skill" *ngFor="let s of skills1; let i = index;">
-        <img  src="{{ skills1[i].url }}" alt="">
-        <span>{{ skills1[i].name }}</span>
-      </a>
+  <div class="max-width">
+    <h1>{{ languageModule.sl_h1Skillset }}</h1>
+    <div class="skills">
+      <div class="split">
+        <a href="{{ skills1[i].link }}" id="skill{{ i }}" class="skill" *ngFor="let s of skills1; let i = index;">
+          <img  src="{{ skills1[i].url }}" alt="">
+          <span>{{ skills1[i].name }}</span>
+        </a>
+      </div>
     </div>
   </div>
 </div>

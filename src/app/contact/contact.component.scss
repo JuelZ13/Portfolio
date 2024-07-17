@@ -1,4 +1,9 @@
 @import "../../shared/variables";
+
+.max-width{
+  max-width: 1440px;
+}
+
 h1{
   color: #FF5959;
   font-family: "Baloo";
@@ -19,7 +24,7 @@ h1{
     flex-direction: column;
     justify-content: space-between;
     width: calc(45vw - 100px);
-    max-width: 548px;
+    max-width: 540px;
     padding-bottom: 40px;
 
     h2{

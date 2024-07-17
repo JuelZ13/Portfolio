@@ -4,24 +4,35 @@
   height: 100vh;
   min-height: 800px;
   display: flex;
-  padding-right: 100px;
-  justify-content: space-between;
+  justify-content: center;
 
+  .max-width{
+    position: relative;
+    height: 100vh;
+    min-height: 800px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 100px);
+    max-width: 1440px;
+    padding-right: 100px;
+  }
 
   .ellipsebg{
     position: absolute;
     object-fit: cover;
     min-width: 612px;
-    top: 0px;
-    left: 0px;
+    width: 892px;
+    max-width: 60%;
+    top: -71px;
+    left: -199px;
   }
 
   .profilimg {
     margin-top: 106px;
-    max-width: 50%;
     object-fit: cover;
     object-position: top;
     z-index: 1;
+    max-width: 72%;
   }
 
   .headline {
@@ -102,6 +113,7 @@
   position: absolute;
   bottom: -103px;
   left: calc(50% - 103px);
+  z-index: 1;
 }
 
 
@@ -127,15 +139,19 @@
 }
 
 
-@media(max-width: 1120px){
+@media(max-width: 1040px){
   .ellipsebg{
     top: -22px !important;
     left: -228px !important;
+    width: 612px !important;
+    max-width: none;
   }
 
-  .background {
-    flex-direction: column-reverse;
-    padding-left: 16px;
+  .max-width {
+    flex-direction: column-reverse !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    width: calc(100% - 32px) !important;
 
     .headline {
       color: white !important;
@@ -159,12 +175,6 @@
   }
   .divLinks{
     display: none;
-  }
-}
-
-@media(max-width: 460px){
-  .background {
-   overflow: hidden;
   }
 }
 

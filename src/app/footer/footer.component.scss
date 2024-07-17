@@ -1,18 +1,26 @@
 .footer{
   height: 291px;
   background: radial-gradient(71.18% 335.57% at 28.82% -124.4%, #FF5959 6.25%, #FF5959 51.56%, #DE0000 100%);
-  padding-left: 100px;
-  padding-right: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  .max-width{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 1440px;
+  }
 
   .divFooter{
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
-
+    margin-left: 100px;
+    margin-right: 100px;
 
     .middle{
       display: flex;
@@ -84,6 +92,14 @@
     }
   }
 }
+
+@media(min-width:1440px){
+    .max-width{
+      margin-left: 100px;
+      margin-right: 100px;
+    }
+}
+
 @media(max-width: 1120px){
   .footer{
     height: 380px;
@@ -97,7 +113,6 @@
   .divImpressum{
     transform: translateY(48px);
   }
-
 }
 
 

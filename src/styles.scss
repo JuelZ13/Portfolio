@@ -4,14 +4,11 @@ html{
 
 body{
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 app-root{
   position: relative;
-  max-width: 1440px;
+  width: 100%;
 }
 
 *{
@@ -54,9 +51,26 @@ app-contact{
 
 
 @media(min-width:1440px){
+  body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   app-navbar{
     left: calc((100vw - 1440px) / 2);
     right: calc((100vw - 1440px) / 2);
+  }
+  app-lwt{
+    display: flex;
+    justify-content: center;
+  }
+  app-mywork{
+    display: flex;
+    justify-content: center;
+  }
+  app-contact{
+    display: flex;
+    justify-content: center;
   }
 }
 
