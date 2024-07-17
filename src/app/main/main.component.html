@@ -1,7 +1,8 @@
-<app-pov></app-pov>
+<app-pov [class.d-none]="languageModule.impressumOn"></app-pov>
 <app-navbar></app-navbar>
-<app-lwt id="aboutme"></app-lwt>
-<app-skillset id="skills"></app-skillset>
-<app-mywork id="mywork"></app-mywork>
-<app-contact id="contact"></app-contact>
+<app-lwt [class.d-none]="languageModule.impressumOn" id="aboutme"></app-lwt>
+<app-skillset [class.d-none]="languageModule.impressumOn" id="skills"></app-skillset>
+<app-mywork [class.d-none]="languageModule.impressumOn" id="mywork"></app-mywork>
+<app-contact [class.d-none]="languageModule.impressumOn" id="contact"></app-contact>
+<app-impressum [class.d-none]="!languageModule.impressumOn"></app-impressum>
 <app-footer></app-footer>

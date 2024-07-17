@@ -11,6 +11,8 @@ import { PrivacyComponent } from '../privacy/privacy.component';
 })
 export class LanguageModule {
 
+  @Input() public impressumOn = false;
+
   public selectedLanguage:string = "en";
   @Input() public sl_languageImg:string ="";
   @Input() public sl_aboutme:string = "";

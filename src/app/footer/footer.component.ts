@@ -11,4 +11,13 @@ import { LanguageModule } from '../language/language.module';
 export class FooterComponent {
 
   constructor(public languageModule: LanguageModule){}
+
+  switchImpressum(){
+    if(this.languageModule.impressumOn){
+      this.languageModule.impressumOn = false;
+    }else{
+      this.languageModule.impressumOn = true;
+    }
+  }
 }
+

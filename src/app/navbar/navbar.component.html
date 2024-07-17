@@ -11,20 +11,20 @@
     <div class="mobileLinks">
       <div class="links">
         <div>
-          <a [class.linkActive]="1 == linkActive" class="aboutme" href="#aboutme" (click)="linkActive=1; mobileMenu=0">{{ languageModule.sl_aboutme }}</a>
-        <div [class.linkAboutMeActive]="1 == linkActive"></div>
+          <a (click)="languageModule.impressumOn = false; true" [class.linkActive]="1 == linkActive" class="aboutme" href="#aboutme" (click)="linkActive=1; mobileMenu=0">{{ languageModule.sl_aboutme }}</a>
+          <div [class.linkAboutMeActive]="1 == linkActive"></div>
         </div>
         <div>
-          <a [class.linkActive]="2 == linkActive" class="skillset" href="#skills" (click)="linkActive=2; mobileMenu=0">{{ languageModule.sl_skillset }}</a>
+          <a (click)="languageModule.impressumOn = false; true" [class.linkActive]="2 == linkActive" class="skillset" href="#skills" (click)="linkActive=2; mobileMenu=0">{{ languageModule.sl_skillset }}</a>
           <div [class.linkskillSetActive]="2 == linkActive"></div>
         </div>
         <div>
-          <a [class.linkActive]="3 == linkActive" class="mywork" href="#mywork" (click)="linkActive=3; mobileMenu=0">{{ languageModule.sl_mywork }}</a>
+          <a (click)="languageModule.impressumOn = false; true" [class.linkActive]="3 == linkActive" class="mywork" href="#mywork" (click)="linkActive=3; mobileMenu=0">{{ languageModule.sl_mywork }}</a>
           <div [class.linkMyWorkActive]="3 == linkActive"></div>
         </div>
       </div>
       <div class="languageDiv">
-        <a (click)="languageModule.selectLanguage();mobileMenu=0"><img class="languageImg" src="{{ languageModule.sl_languageImg }}" alt="language"></a>
+        <a (click)="languageModule.selectLanguage(); mobileMenu=0"><img class="languageImg" src="{{ languageModule.sl_languageImg }}" alt="language"></a>
       </div>
     </div>
   </div>
