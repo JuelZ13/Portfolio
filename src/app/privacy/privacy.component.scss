@@ -1,7 +1,18 @@
 .privacy{
-  padding: 100px;
+  padding-top: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  max-width: 1240px;
 }
 
 h1{
   margin-top: 0;
+}
+
+@media(max-width:1120px){
+  .privacy{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }

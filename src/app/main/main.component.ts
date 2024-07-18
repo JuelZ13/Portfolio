@@ -8,6 +8,7 @@ import { MyworkComponent } from "../mywork/mywork.component";
 import { ContactComponent } from "../contact/contact.component";
 import { FooterComponent } from "../footer/footer.component";
 import { ImpressumComponent } from '../impressum/impressum.component';
+import { PrivacyComponent } from "../privacy/privacy.component";
 
 
 @Component({
@@ -15,7 +16,7 @@ import { ImpressumComponent } from '../impressum/impressum.component';
     standalone: true,
     templateUrl: './main.component.html',
     styleUrl: './main.component.scss',
-    imports: [NavbarComponent, PovComponent, LwtComponent, SkillsetComponent, MyworkComponent, ContactComponent, FooterComponent, ImpressumComponent]
+    imports: [NavbarComponent, PovComponent, LwtComponent, SkillsetComponent, MyworkComponent, ContactComponent, FooterComponent, ImpressumComponent, PrivacyComponent]
 })
 export class MainComponent {
   constructor(public languageModule: LanguageModule){}

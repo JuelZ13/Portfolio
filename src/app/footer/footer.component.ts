@@ -15,8 +15,10 @@ export class FooterComponent {
   switchImpressum(){
     if(this.languageModule.impressumOn){
       this.languageModule.impressumOn = false;
+      this.languageModule.privacyOn = false;
     }else{
       this.languageModule.impressumOn = true;
+      this.languageModule.privacyOn = false;
     }
   }
 }

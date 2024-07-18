@@ -36,7 +36,7 @@
           <img [class.d-none]="!formActive" class="valid" src="{{ messageImg }}">
         </div>
         <div class="group groupPrivacy">
-          <label class="container">{{ languageModule.sl_contactPrivacy1 }}<a href="privacy" target="_blank">{{ languageModule.sl_contactPrivacy2 }}</a>{{ languageModule.sl_contactPrivacy3 }}
+          <label class="container">{{ languageModule.sl_contactPrivacy1 }}<a (click)="languageModule.privacyOn = true; this.languageModule.impressumOn = false;">{{ languageModule.sl_contactPrivacy2 }}</a>{{ languageModule.sl_contactPrivacy3 }}
             <input (change)="checkInput()" [(ngModel)]="checkboxPrivacy" type="checkbox" name="checkbox" required>
             <span class="checkmark"></span>
           </label>

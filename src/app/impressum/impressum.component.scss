@@ -1,7 +1,18 @@
 .impressum{
-  padding: 100px;
+  padding-top: 200px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 50px;
+  min-height: calc(100vh - 541px);
+  max-width: calc(100vh - 200px);
 }
 
 h1{
   margin-top: 0;
+}
+@media(max-width:1120px){
+  .impressum{
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }

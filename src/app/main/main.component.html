@@ -1,8 +1,9 @@
-<app-pov [class.d-none]="languageModule.impressumOn"></app-pov>
+<app-pov [class.d-none]="languageModule.impressumOn || languageModule.privacyOn"></app-pov>
 <app-navbar></app-navbar>
-<app-lwt [class.d-none]="languageModule.impressumOn" id="aboutme"></app-lwt>
-<app-skillset [class.d-none]="languageModule.impressumOn" id="skills"></app-skillset>
-<app-mywork [class.d-none]="languageModule.impressumOn" id="mywork"></app-mywork>
-<app-contact [class.d-none]="languageModule.impressumOn" id="contact"></app-contact>
-<app-impressum [class.d-none]="!languageModule.impressumOn"></app-impressum>
+<app-lwt [class.d-none]="languageModule.impressumOn || languageModule.privacyOn" id="aboutme"></app-lwt>
+<app-skillset [class.d-none]="languageModule.impressumOn || languageModule.privacyOn" id="skills"></app-skillset>
+<app-mywork [class.d-none]="languageModule.impressumOn || languageModule.privacyOn" id="mywork"></app-mywork>
+<app-contact [class.d-none]="languageModule.impressumOn || languageModule.privacyOn" id="contact"></app-contact>
+<app-impressum [class.d-none]="!languageModule.impressumOn || languageModule.privacyOn"></app-impressum>
+<app-privacy [class.d-none]="!languageModule.privacyOn || languageModule.impressumOn"></app-privacy>
 <app-footer></app-footer>
