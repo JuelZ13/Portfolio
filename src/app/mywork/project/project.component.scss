@@ -93,7 +93,6 @@
     width: 100%;
     display: flex;
     justify-content: flex-start;
-    gap: 50px;
   }
 
   .divButtons1{
@@ -102,7 +101,6 @@
     width: 100%;
     display: flex;
     justify-content: flex-end;
-    gap: 50px;
   }
 
   .noAnimationBtn{
@@ -206,7 +204,8 @@
   }
 
   .linkProject{
-    margin-left: 50px;
+    margin-left: 0px;
+    align-items: center;
     min-width: 390px !important;
     height: 279px !important;
 
@@ -247,7 +246,6 @@
   }
 
   .linkProject{
-    margin-left: 50px;
     min-width: 320px !important;
     height: 223px !important;
 

@@ -116,9 +116,17 @@
   z-index: 1;
 }
 
+@media(min-width: 1440px){
+  .background{
+    width: calc(100vw - 17px);
+  }
+}
 
+@media(max-width: 1440px){
+  .max-width{
+    overflow: hidden;
+  }
 
-@media(max-width: 1422px){
   .h1 {
     font-size: 36px !important;
     line-height: 36px !important;
